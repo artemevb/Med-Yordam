@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Med Yordam</title>
+    <meta name="title" content="Специализированные медицинские услуги - Med Yordam">
+    <meta name="description" content="Med Yordam предлагает Вам консультацию от врачей, получите беслпатную консультацию позвонив нам">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navigation">
+                <div class="map_info">
+                    <img src="icons/experience/map_marker.svg" alt="map_marker">
+                    <select class="sel-group" id="toggleSel"> 
+                        <option>Ташкент</option>
+                        <option>США</option>
+                        <option>Россия</option>
+                    </select>
+                </div> 
+                <div class="lang_info">
+                    <img src="icons/experience/flag_ru.svg" alt="lang_flag">
+                    <div class="lang_name">Язык:</div>
+                    <select class="group_lang" id="lang"> 
+                        <option>Rus</option>
+                        <option>Eng</option>
+                        <option>Uzb</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="menu">
+                <div class="menu__item">
+                    <div class="menu__item-logo">
+                        <img src="icons/logo/Logo.svg" alt="logo">
+                    </div>
+                    <div class="menu__item-consultation">
+                        Консультация от врачей
+                    </div>
+                </div>
+ 
+
+                <button class="menu__btn btn">
+                    <img src="icons/experience/apps.svg" alt="logo">
+                    Каталог услуг
+                </button>
+
+                <div class="menu__inf">
+                    <span><a href="#">О проекте</a></span>
+                    <span><a href="#">Партнерство</a></span>
+                    <span><a href="#">Контакты</a></span>
+                </div>
+                <div class="menu__login">
+                    <span><a href="#">Вход / Регистрация</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="consultation">
+        <div class="container">
+            <div class="consultation__item">
+                <div class="consultation__item-text">
+                    Консультация от врачей
+                </div>
+                <h1 class="consultation__item-subtitle">Получайте бесплатную консультацию от лучших специалистов</h1>
+
+                <div class="consultation__item-buttons">
+                    <form action="#">
+                        <button class="consultation__btn btn_question">
+                            <img src="icons/figures/star.svg" alt="star_button">
+                            Лучшие консультанты
+                        </button>
+                    </form>
+                    <form action="#">
+                        <button class="askquestion__btn btn_question">
+                            <img src="icons/figures/question_circle.svg" alt="ask_question_button">
+                            Задать вопрос
+                        </button>
+                    </form>
+                    <form action="#">
+                        <button class="popular__btn btn_question">
+                            <img src="icons/experience/files_landscapes-alt.svg" alt="main_button">
+                            Популярные вопросы
+                        </button>
+                    </form>
+                </div>
+
+                <div class="consultation__item-statistics">
+                    <div class="consultation__info">
+                        +1 000
+                        <div class="title_fz16">
+                            Врачей различных специализаций 
+                        </div>
+                    </div>
+                    <div class="consultation__info">
+                        24/7
+                        <div class="title_fz16">
+                            Доступ к медицинской помощи
+                        </div>
+                    </div>
+                    <div class="consultation__info">
+                        + 95%
+                        <div class="title_fz16">
+                            Положительных отзывов
+                        </div>
+                    </div>
+                    <div class="consultation__info">
+                        +20 000
+                        <div class="title_fz16">
+                            Анкет пользователей
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="questions">
+        <div class="container">
+            <div class="questions__wrapper">
+                <div class="questions__filter">
+                    <div class="questions__filter-block">
+                        <div class="questions__filter-nav">
+                            Фильтрация по направлениям
+                        </div>
+                        <button class="questions__filter-delete" id="reset-button">
+                            <img src="icons/experience/close.svg" alt="ask_question_button">
+                            Сбросить
+                        </button>  
+                    </div>
+                    <div class="search__block"></div>
+                        <div class="questions__filter-search">
+                            <form action="#">
+                                <input type="text" placeholder="Поиск направления" name="search">
+                                <button type="submit">
+                                    <img src="icons/figures/search.svg" alt="main_button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                    <div class="filter"> 
+                        <div class="checkbox">
+                            <input type="checkbox" id="allergistCheckbox" rel="allergolog" onchange="change()">
+                            <label for="allergistCheckbox">Аллерголог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="andrologCheckbox" rel="androlog" onchange="change()">
+                            <label for="andrologCheckbox">Андролог</label>
+                            <label for="andrologCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="uziCheckbox" rel="uzi" onchange="change()">
+                            <label for="uziCheckbox">Врач УЗИ</label>
+                            <label for="uziCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="gastroenterologCheckbox" rel="gastroenterolog" onchange="change()">
+                            <label for="gastroenterologCheckbox">Гастроэтеролог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="gematologCheckbox" rel="gematolog" onchange="change()">
+                            <label for="gematologCheckbox">Гематолог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="genetikCheckbox" rel="genetik" onchange="change()">
+                            <label for="genetikCheckbox">Генетик</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="ginekologCheckbox" rel="ginekolog" onchange="change()">
+                            <label for="ginekologCheckbox">Гинеколог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="dermatologCheckbox" rel="dermatolog" onchange="change()">
+                            <label for="dermatologCheckbox">Дерматолог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="dietologCheckbox" rel="dietolog" onchange="change()">
+                            <label for="dietologCheckbox">Диетолог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="infekcionistCheckbox" rel="infekcionist" onchange="change()">
+                            <label for="infekcionistCheckbox">Инфекционист</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="kardiologCheckbox" rel="kardiolog" onchange="change()">
+                            <label for="kardiologCheckbox">Кардиолог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="gastroeterologCheckbox" rel="gastroeterolog" onchange="change()">
+                            <label for="gastroeterologCheckbox">Гастроэтеролог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="lorCheckbox" rel="lor" onchange="change()">
+                            <label for="lorCheckbox">ЛОР</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="mammologCheckbox" rel="mammolog" onchange="change()">
+                            <label for="mammologCheckbox">Маммолог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="narkologCheckbox" rel="narkolog" onchange="change()">
+                            <label for="narkologCheckbox">Нарколог</label>
+                            <label for="allergistCheckbox" class="count">(12 312)</label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="questions__last">
+                    <div class="questions__last-sort">
+
+                        <h2 class="questions__last-title">Список последних ответов на вопросы <span class="questions-number">(12 493)</span> </h2>
+                        <form action="#">
+                            <button class="questions__last-btn">
+                                <img src="icons/experience/sort_amount-up.svg" alt="sort_button">
+                                Сортировать по
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="search-container">
+                        <input type="text" placeholder="Искать по тексту вопроса">
+                        <button type="submit">
+                            <img src="icons/figures/search_white.svg" alt="search">Поиск</button>
+                    </div>
+
+                
+                    <div class="result">
+                        <div class="allergolog">
+
+                            <div class="questions__answers-wrapper"> 
+                                <div class="wrapper__top">
+                                    <span class="questions-number">Вопрос: 21408</span>
+                                    <span class="questions-number">Январь 27, 2024 9:41 pm</span>
+                                </div>
+    
+                                <div class="answers__body">
+                                    <div class="frame_user">
+                                        <img src="icons/figures/frame.svg" alt="search"></div>
+                                    <div class="answers__body-user">
+                                        <div class="answers__body-inf">
+                                            <span class="answers-number">Получено ответов (3)</span>
+                                            <span class="info-user">Lorri Warf (26 лет)</span>
+                                        </div>
+                                
+    
+                                        <div class="questions-user">"Здравствуйте, доктор. В последнее время я заметил(а), что стал(а) быстро уставать и появилась постоянная усталость, несмотря на полноценный сон. К тому же, у меня снизился аппетит, и я замечаю периодические головные боли. Могли бы вы подсказать, что это может быть и какие обследования мне стоит пройти для уточнения... <span class="more__info">Читать полностью</span>
+                                        </div> 
+    
+                                    </div>
+                                </div>
+                                
+                                <div class="answers__body-doc">
+                                    <div class="frame_doc">
+                                        <img src="img/doc/doc_photo.jpg" alt="search"></div>
+                                    <div class="answers__doc">
+                                        <div class="answers__doc-inf">
+                                            <span class="doc_name">Mary Freund (Гастроинтеролог)</span>
+                                            <span class="date-answers">Январь 28, 2024 9:41 pm</span>
+                                        </div>
+                                
+    
+                                        <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего...<span class="more__info-doc">Читать полностью</span>
+                                        </div> 
+    
+                                    </div>
+                                </div>
+    
+                                <details class="details">
+                                    <summary class="details__title">Смотреть все ответы (2)</summary>
+                                    <div class="details__content">
+                                        <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего...<span class="more__info-doc">Читать полностью</span>
+                                        </div> 
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+
+                        </div>
+                        <div class="androlog">
+                            <div class="questions__answers-wrapper"> <!--сам блок-->
+                                <div class="wrapper__top">
+                                    <span class="questions-number">Вопрос: 21408</span>
+                                    <span class="questions-number">Январь 27, 2024 9:41 pm</span>
+                                </div>
+    
+                                <div class="answers__body">
+                                    <div class="frame_user_g">
+                                        <img src="icons/figures/frame_g.svg" alt="search"></div>
+                                    <div class="answers__body-user">
+                                        <div class="answers__body-inf">
+                                            <span class="answers-number">Получено ответов (3)</span>
+                                            <span class="info-user">Kimberly Mastrangelo (24 лет)</span>
+                                        </div>
+                                
+    
+                                        <div class="questions-user">"Здравствуйте, доктор. В последнее время я заметил(а), что стал(а) быстро уставать и появилась постоянная усталость, несмотря на полноценный сон. К тому же, у меня снизился аппетит, и я замечаю периодические головные боли. Могли бы вы подсказать, что это может быть и какие обследования мне стоит пройти для уточнения... <span class="more__info">Читать полностью</span>
+                                        </div> 
+    
+                                    </div>
+                                </div>
+                                
+                                <div class="answers__body-doc">
+                                    <div class="frame_doc">
+                                        <img src="img/doc/doc_photo.jpg" alt="search"></div>
+                                    <div class="answers__doc">
+                                        <div class="answers__doc-inf">
+                                            <span class="doc_name">Mary Freund (Гастроинтеролог)</span>
+                                            <span class="date-answers">Январь 28, 2024 9:41 pm</span>
+                                        </div>
+                                
+    
+                                        <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего... <span class="more__info-doc">Читать полностью</span>
+                                        </div> 
+    
+                                    </div>
+                                </div>
+    
+                                <details class="details">
+                                    <summary class="details__title">Смотреть все ответы (2)</summary>
+                                    <div class="details__content">
+                                        <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего...<span class="more__info">Читать полностью</span>
+                                        </div> 
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+
+                        <div class="uzi">
+
+                            <div class="questions__answers-wrapper"> 
+                            <div class="wrapper__top">
+                                <span class="questions-number">Вопрос: 21408</span>
+                                <span class="questions-number">Январь 27, 2024 9:41 pm</span>
+                            </div>
+
+                            <div class="answers__body">
+                                <div class="frame_user">
+                                    <img src="icons/figures/frame.svg" alt="search"></div>
+                                <div class="answers__body-user">
+                                    <div class="answers__body-inf">
+                                        <span class="answers-number">Получено ответов (3)</span>
+                                        <span class="info-user">Lorri Warf (26 лет)</span>
+                                    </div>
+                            
+
+                                    <div class="questions-user">"Здравствуйте, доктор. В последнее время я заметил(а), что стал(а) быстро уставать и появилась постоянная усталость, несмотря на полноценный сон. К тому же, у меня снизился аппетит, и я замечаю периодические головные боли. Могли бы вы подсказать, что это может быть и какие обследования мне стоит пройти для уточнения... <span class="more__info">Читать полностью</span>
+                                    </div> 
+
+                                </div>
+                            </div>
+                            
+                            <div class="answers__body-doc">
+                                <div class="frame_doc">
+                                    <img src="img/doc/doc_photo.jpg" alt="search"></div>
+                                <div class="answers__doc">
+                                    <div class="answers__doc-inf">
+                                        <span class="doc_name">Mary Freund (Гастроинтеролог)</span>
+                                        <span class="date-answers">Январь 28, 2024 9:41 pm</span>
+                                    </div>
+                            
+
+                                    <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего... <span class="more__info-doc">Читать полностью</span>
+                                    </div> 
+
+                                </div>
+                            </div>
+
+                            <details class="details">
+                                <summary class="details__title">Смотреть все ответы (2)</summary>
+                                <div class="details__content">
+                                    <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего...<span class="more__info">Читать полностью</span>
+                                    </div> 
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+
+                        <div class="gastroenterolog">
+
+
+                            <div class="questions__answers-wrapper"> <!--сам блок-->
+                                <div class="wrapper__top">
+                                    <span class="questions-number">Вопрос: 21408</span>
+                                    <span class="questions-number">Январь 27, 2024 9:41 pm</span>
+                                </div>
+    
+                                <div class="answers__body">
+                                    <div class="frame_user_g">
+                                        <img src="icons/figures/frame_g.svg" alt="search"></div>
+                                    <div class="answers__body-user">
+                                        <div class="answers__body-inf">
+                                            <span class="answers-number">Получено ответов (3)</span>
+                                            <span class="info-user">Kimberly Mastrangelo (24 лет)</span>
+                                        </div>
+                                
+    
+                                        <div class="questions-user">"Здравствуйте, доктор. В последнее время я заметил(а), что стал(а) быстро уставать и появилась постоянная усталость, несмотря на полноценный сон. К тому же, у меня снизился аппетит, и я замечаю периодические головные боли. Могли бы вы подсказать, что это может быть и какие обследования мне стоит пройти для уточнения... <span class="more__info">Читать полностью</span>
+                                        </div> 
+    
+                                    </div>
+                                </div>
+                                
+                                <div class="answers__body-doc">
+                                    <div class="frame_doc">
+                                        <img src="img/doc/doc_photo.jpg" alt="search"></div>
+                                    <div class="answers__doc">
+                                        <div class="answers__doc-inf">
+                                            <span class="doc_name">Mary Freund (Гастроинтеролог)</span>
+                                            <span class="date-answers">Январь 28, 2024 9:41 pm</span>
+                                        </div>
+                                
+    
+                                        <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего... <span class="more__info-doc">Читать полностью</span>
+                                        </div> 
+    
+                                    </div>
+                                </div>
+    
+                                <details class="details">
+                                    <summary class="details__title">Смотреть все ответы (2)</summary>
+                                    <div class="details__content">
+                                        <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего...<span class="more__info-doc">Читать полностью</span>
+                                        </div> 
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+
+                        <div class="gematolog">
+
+
+                            <div class="questions__answers-wrapper"> 
+                                <div class="wrapper__top">
+                                    <span class="questions-number">Вопрос: 21408</span>
+                                    <span class="questions-number">Январь 27, 2024 9:41 pm</span>
+                                </div>
+    
+                                <div class="answers__body">
+                                    <div class="frame_user">
+                                        <img src="icons/figures/frame.svg" alt="search"></div>
+                                    <div class="answers__body-user">
+                                        <div class="answers__body-inf">
+                                            <span class="answers-number">Получено ответов (3)</span>
+                                            <span class="info-user">Lorri Warf (26 лет)</span>
+                                        </div>
+                                
+    
+                                        <div class="questions-user">"Здравствуйте, доктор. В последнее время я заметил(а), что стал(а) быстро уставать и появилась постоянная усталость, несмотря на полноценный сон. К тому же, у меня снизился аппетит, и я замечаю периодические головные боли. Могли бы вы подсказать, что это может быть и какие обследования мне стоит пройти для уточнения... <span class="more__info">Читать полностью</span>
+                                        </div> 
+    
+                                    </div>
+                                </div>
+                                
+                                <div class="answers__body-doc">
+                                    <div class="frame_doc">
+                                        <img src="img/doc/doc_photo.jpg" alt="search"></div>
+                                    <div class="answers__doc">
+                                        <div class="answers__doc-inf">
+                                            <span class="doc_name">Mary Freund (Гастроинтеролог)</span>
+                                            <span class="date-answers">Январь 28, 2024 9:41 pm</span>
+                                        </div>
+                                
+    
+                                        <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего... <span class="more__info-doc">Читать полностью</span>
+                                        </div> 
+    
+                                    </div>
+                                </div>
+    
+                                <details class="details">
+                                    <summary class="details__title">Смотреть все ответы (2)</summary>
+                                    <div class="details__content">
+                                        <div class="questions-doc">"Можете ли вы, пожалуйста, объяснить, какие могут быть причины моих текущих симптомов (укажите свои симптомы), какие диагностические тесты вы рекомендуете для подтверждения диагноза, и какие методы лечения или изменения в образе жизни вы считаете наиболее эффективными для улучшения моего...<span class="more__info">Читать полностью</span>
+                                        </div> 
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                        
+                    <div class="wrap__block">
+                        <div class = "wrap">
+                            <input type="radio" name="slides" id="point1" checked>
+                            <input type="radio" name="slides" id="point2">
+                            <input type="radio" name="slides" id="point3">
+                            <input type="radio" name="slides" id="point4">
+                            <input type="radio" name="slides" id="point5">
+                            <input type="radio" name="slides" id="point6">
+                            <input type="radio" name="slides" id="point7">
+
+                            <div class="control">
+                                <label for="point1">&lt;</label>
+                                <label for="point2">1</label>
+                                <label for="point3">2</label>
+                                <label for="point4">3</label>
+                                <label for="point5">4</label>
+                                <label for="point6">...</label>
+                                <label for="point6">></label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- </div>  -->
+                </div>  
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="block__info block_1 title_fz16">
+                    <div class="logo">
+                        <img src="icons/logo/logo_white.svg" alt="search">
+                    </div>
+                    <div class="block__info-1">Консультация от врачей</div>
+                </div>
+
+                <div class="block__info block_2">
+                    <ul class="katalog">
+                        <li class="katalog-item title_fz16">Каталог услуг</li>
+                        <li>Медицинская консультация</li>
+                        <li>Справочник лекарств</li>
+                        <li>Справочник болезней</li>
+                        <li>Справочник лекарств</li>
+                        <li>Справочник Врачей и Клиник</li>
+                    </ul>
+                </div>
+                <div class="block__info block_3">
+                    <ul class="katalog">
+                        <li class="katalog-item title_fz16">Выполнить</li>
+                        <li>Задать вопрос</li>
+                        <li>Лучшие консультанты</li>
+                        <li>Популярные вопросы</li>
+                        <li>Регистрация</li>
+                        <li>Вход в личный кабинет</li>
+                    </ul>
+                </div>
+                <div class="block__info block_4">
+                    <ul class="katalog">
+                        <li class="katalog-item title_fz16">Проект</li>
+                        <li>Информация о проекте</li>
+                        <li>Сотрудничество</li>
+                        <li>Контакты для связи</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__polity">
+                <span><a href="#">MedYordam 2024 - Все права защищены</a></span>
+                <span><a href="#">Обработка данных</a></span>
+                <span><a href="#">Условия использования</a></span>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    background-color: #F8F8F8
+}
+.header{
+    padding-bottom: 20px;
+    .navigation{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        align-self: stretch;
+        .map_info{
+            display: flex;
+            max-width: 126px;
+            height: 54px;
+            padding: 30px 0px;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            .sel-group{
+                width: 97px;
+                border: none;
+                outline: none;
+                background-color: #F8F8F8;
+            }
+        }
+        .lang_info{
+            display: flex;
+            max-width: 186px;
+            padding: 30px 0px;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            .lang_name{
+                color: (#747474);
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .group_lang{
+                width: 126px;
+                border: none;
+                outline: none;
+                background-color: #F8F8F8
+            }
+        }
+        
+    }
+
+
+
+    .menu{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &__item{
+            display: flex;
+            padding: 18px 55.5px 18px 22px;
+            align-items: center;
+            gap: 20px;
+            background-color: #fff;
+            border-radius: 16px;
+            &-consultation{
+                max-width: 103px;
+                color: ( #747474);
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        &__btn{
+            display: flex;
+            height: 76px;
+            padding: 30px 60px;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            border-radius: 16px;
+            border:none;
+            background: ( #0129E3);
+            color:#fff;
+            font-weight: 500;
+            font-size: 16px;
+            &:hover{
+                background-color: #0056b3;
+            }
+        }
+        &__inf{
+            background-color: #fff;
+            border-radius: 16px;
+            display: flex;
+            padding: 30px 49px;
+            justify-content: center;
+            align-items: center;
+            gap: 26px;
+            font-size: 16px;
+            font-weight: 500;
+            a{
+                color: #747474;
+                text-decoration: none;
+            }
+
+        }
+        &__login{
+            display: flex;
+            height: 76px;
+            padding: 30px 60px;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            border-radius: 16px;
+            background: #FFF;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+
+}
